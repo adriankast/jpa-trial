@@ -1,0 +1,53 @@
+<settings>
+    <activeProfiles>
+        <!--make the profile active all the time -->
+        <activeProfile>securecentral</activeProfile>
+    </activeProfiles>
+    <profiles>
+        <profile>
+            <id>securecentral</id>
+            <!--Override the repository (and pluginRepository) "central" from the
+               Maven Super POM -->
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
+
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <sonar.login>c42f58c9bd22c837b819e6d214f01d11ecb845f3</sonar.login>
+                <sonar.host.url>
+                    http://localhost:9000
+                </sonar.host.url>
+            </properties>
+        </profile>
+
+
+    </profiles>
+
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+
+
+</settings>
