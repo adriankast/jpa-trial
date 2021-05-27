@@ -1,9 +1,9 @@
 package com.example.jpademo.controller;
 
+import com.example.jpaDemo.KleineTestklasse;
 import com.example.jpademo.entities.Person;
 import com.example.jpademo.service.PersonService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +20,7 @@ public class PersonController {
         person.setName(name);
         System.out.println("Received name: " + name);
         personService.createPerson(person);
+        KleineTestklasse.sagEtwas();
     }
 
     @GetMapping("getPersonByName/{name}")

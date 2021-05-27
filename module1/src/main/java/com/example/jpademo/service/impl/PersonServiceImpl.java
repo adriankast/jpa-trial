@@ -1,7 +1,6 @@
 package com.example.jpademo.service.impl;
 
 import com.example.jpademo.entities.Person;
-import com.example.jpademo.entities.PersonJpa;
 import com.example.jpademo.mapper.PersonMapper;
 import com.example.jpademo.repositories.PersonJpaRepo;
 import com.example.jpademo.service.PersonService;
